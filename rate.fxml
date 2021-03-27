@@ -10,8 +10,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="heartbeats.FXMLDocumentController">
    <children>
       <AnchorPane prefHeight="104.0" prefWidth="335.0" style="-fx-background-color: lightblue;">
          <children>
@@ -29,32 +28,32 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </padding>
                <children>
-                  <Button mnemonicParsing="false" prefHeight="64.0" prefWidth="110.0">
+                  <Button mnemonicParsing="false" onAction="#headphonsepage" prefHeight="64.0" prefWidth="110.0">
                      <graphic>
                         <ImageView fitHeight="52.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Downloads/012-512.png" />
+                              <Image url="@/012-512.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="64.0" prefWidth="110.0">
+                  <Button mnemonicParsing="false" onAction="#getHeartBeatsRate" prefHeight="64.0" prefWidth="110.0">
                      <HBox.margin>
                         <Insets />
                      </HBox.margin>
                      <graphic>
                         <ImageView fitHeight="52.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Downloads/heartbeat-512.png" />
+                              <Image url="@/heartbeat-512.png" />
                            </image>
                         </ImageView>
                      </graphic>
                   </Button>
-                  <Button mnemonicParsing="false" prefHeight="64.0" prefWidth="110.0">
+                  <Button mnemonicParsing="false" onAction="#loginpage" prefHeight="64.0" prefWidth="110.0">
                      <graphic>
                         <ImageView fitHeight="52.0" fitWidth="85.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@../Downloads/male-doctor-icon-free-vector.jpg" />
+                              <Image url="@/male-doctor-icon-free-vector.jpg" />
                            </image>
                         </ImageView>
                      </graphic>
@@ -63,7 +62,7 @@
             </HBox>
          </children>
       </AnchorPane>
-      <Label layoutX="130.0" layoutY="230.0" text="59" textFill="#4cadda">
+      <Label fx:id="enterrate" layoutX="130.0" layoutY="230.0" text="59" textFill="#4cadda">
          <font>
             <Font size="64.0" />
          </font>
@@ -79,7 +78,7 @@
          </font>
       </Label>
       <Label layoutX="105.0" layoutY="384.0" text="Result of heartbeat rate" />
-      <TextField layoutX="88.0" layoutY="422.0" />
-      <Button layoutX="139.0" layoutY="466.0" mnemonicParsing="false" text="ENTER" />
+      <TextField fx:id="readrate" layoutX="88.0" layoutY="422.0" />
+      <Button layoutX="139.0" layoutY="466.0" mnemonicParsing="false" onAction="#getHeartBeatsRate" text="ENTER" />
    </children>
 </AnchorPane>
